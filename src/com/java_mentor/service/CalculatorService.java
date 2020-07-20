@@ -15,7 +15,7 @@ public class CalculatorService implements Calculator{
 
     @Override
     public String minus(int a, int b, int type) {
-        if (a<=b){
+        if (type==1&&a<=b){
             return "The first operand must be more than second operand!";
         }
         int result=a-b;
@@ -36,7 +36,7 @@ public class CalculatorService implements Calculator{
 
     @Override
     public String division(int a, int b, int type) {
-        if (a<b){
+        if (type==1&&a<b){
             return "The first operand must be more than second operand!";
         }
         int result=a/b;
